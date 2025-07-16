@@ -1,34 +1,59 @@
+const planets = [
+  { id: "merkur", name: "Merkur" },
+  { id: "venus", name: "Venus" },
+  { id: "jorden", name: "Jorden" },
+  { id: "mars", name: "Mars" },
+  { id: "jupiter", name: "Jupiter" },
+  { id: "saturn", name: "Saturn" },
+  { id: "uranus", name: "Uranus" },
+  { id: "neptun", name: "Neptun" },
+];
+
 function App() {
   return (
-    <div className="text-center p-8 bg-gray-900 text-white min-h-screen">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold">Planet Mars</h1>
-        <nav className="mt-4">
-          <a href="#fakta" className="mr-4 hover:underline">Fakta</a>
-          <a href="#galleri" className="hover:underline">Galleri</a>
+    <div className="bg-gray-900 text-white font-sans min-h-screen">
+      <header className="bg-blue-800 sticky top-0 z-10 shadow">
+        <nav className="max-w-6xl mx-auto p-4 flex flex-wrap gap-4 justify-center">
+          {planets.map((planet) => (
+            <a
+              key={planet.id}
+              href={`#${planet.id}`}
+              className="hover:underline text-sm sm:text-base"
+            >
+              {planet.name}
+            </a>
+          ))}
         </nav>
       </header>
 
-      <main>
-        <section id="fakta" className="mb-12">
-          <h2 className="text-2xl font-semibold mb-2">Fakta om Mars</h2>
-          <p>Mars er den fjerde planeten fra sola, og kalles ofte den røde planeten.</p>
-        </section>
-
-        <section id="galleri" className="mb-12">
-          <h2 className="text-2xl font-semibold mb-2">Bildegalleri</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img src="/mars1.jpg" alt="Mars landskap" className="rounded shadow" />
-            <img src="/mars2.jpg" alt="Mars fra verdensrommet" className="rounded shadow" />
-          </div>
-        </section>
+      <main className="max-w-4xl mx-auto p-6 space-y-16">
+        {planets.map((planet) => (
+          <section key={planet.id} id={planet.id} className="scroll-mt-20">
+            <h2 className="text-3xl font-bold mb-4">{planet.name}</h2>
+            <p className="text-lg mb-4">
+              Her kan du legge til informasjon om {planet.name.toLowerCase()}.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <img
+                src={`/images/${planet.id}1.jpg`}
+                alt={`${planet.name} bilde 1`}
+                className="rounded shadow"
+              />
+              <img
+                src={`/images/${planet.id}2.jpg`}
+                alt={`${planet.name} bilde 2`}
+                className="rounded shadow"
+              />
+            </div>
+          </section>
+        ))}
       </main>
 
-      <footer className="mt-12 text-sm text-gray-400">
+      <footer className="bg-gray-800 text-center p-4 mt-16 text-sm text-gray-400">
         <p>Laget av [Ditt Navn] – Sommeroppgave 2025</p>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
