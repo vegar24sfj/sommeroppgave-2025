@@ -13,7 +13,7 @@ const planets = [
 
 const planetImages = {
   merkur:
-    "https://upload.wikimedia.org/wikipedia/commons/2/2e/Mercury_globe.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/3/30/Mercury_in_color_-_Prockter07_centered.jpg",
   venus:
     "https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg",
   jorden:
@@ -32,7 +32,7 @@ function App() {
   const rightPlanets = planets.slice(4, 8);
 
   return (
-    <div className="bg-gray-900 text-white font-sans min-h-screen">
+    <div className="bg-black   text-white font-sans min-h-screen">
       <header className="bg-blue-800 sticky top-0 z-10 shadow">
         <nav className="max-w-6xl mx-auto p-4 flex items-center justify-between">
           {/* Logo og navn */}
@@ -72,7 +72,7 @@ function App() {
         {/* Midtkolonne med stort bilde */}
         <div className="hidden md:block">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg"
+            src="https://upload.wikimedia.org/wikipedia/commons/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg"
             alt="Illustrasjon mellom kolonner"
             className="rounded shadow mx-auto max-h-[800px] object-contain"
             loading="lazy"
@@ -111,7 +111,7 @@ function App() {
       </section>
 
       <footer className="bg-gray-800 text-center p-4 mt-16 text-sm text-gray-400">
-        <p>Laget av [Ditt Navn] – Sommeroppgave 2025</p>
+        <p>Laget av Vegar – Sommeroppgave 2025</p>
       </footer>
     </div>
   );
