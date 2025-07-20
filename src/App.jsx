@@ -5,8 +5,8 @@ import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
-    <div className="bg-black text-white min-h-screen p-6">
-      <header className="text-center text-3xl font-bold mb-10 flex justify-between items-center">
+    <div className="min-h-screen text-white bg-black">
+      <header className="text-center text-3xl font-bold mb-10 flex justify-between items-center p-6">
         <div>🌌 Planetside</div>
         <nav>
           <a href="#contact" className="text-blue-400 hover:underline">
@@ -16,7 +16,7 @@ function App() {
       </header>
 
       {/* Planeter */}
-      <div className="flex flex-wrap justify-center gap-10 mb-28">
+      <div className="flex flex-wrap justify-center gap-10 mb-40 px-6">
         {planets.map((planet) => (
           <PlanetCard
             key={planet.id}
@@ -27,9 +27,15 @@ function App() {
         ))}
       </div>
 
-      {/* Kontakt-skjema */}
-      <div className="mt-96"></div>
-      <ContactForm />
+      {/* Kontaktseksjon med overgangseffekt */}
+      <div
+        id="contact"
+        className="bg-gradient-to-b from-black via-blue-900 to-white text-black py-24 px-6"
+      >
+        <div className="max-w-3xl mx-auto">
+          <ContactForm />
+        </div>
+      </div>
     </div>
   );
 }
