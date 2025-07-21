@@ -24,7 +24,7 @@ function App() {
       </header>
 
       {/* Planeter: flex rad, tett med gap, overflow-visible slik popup får plass */}
-      <div className="flex flex-nowrap justify-center gap-2 mb-40 px-6 relative z-30 overflow-visible">
+      <div className="flex flex-nowrap justify-center gap-2 mb-56 px-6 relative z-30 overflow-visible">
         {planets.map((planet) => (
           <PlanetCard
             key={planet.id}
