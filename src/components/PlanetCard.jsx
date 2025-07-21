@@ -13,12 +13,13 @@ const PlanetCard = ({ name, image, description }) => {
       <img
         src={image}
         alt={name}
-        className={`rounded-full w-44 h-44 object-cover mx-auto transition-transform duration-300 ease-in-out ${
+        className={`w-44 h-44 object-contain mx-auto transition-transform duration-300 ease-in-out ${
           hover
-            ? "scale-110 shadow-[0_0_30px_0_rgba(0,255,255,0.6)]"
-            : "shadow-lg"
+            ? "scale-110 drop-shadow-[0_0_30px_rgba(0,255,255,0.6)]"
+            : "drop-shadow"
         }`}
       />
+
       <h3 className="mt-2 font-semibold">{name}</h3>
 
       {hover && (
