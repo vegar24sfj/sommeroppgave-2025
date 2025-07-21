@@ -14,9 +14,7 @@ function App() {
         backgroundRepeat: "repeat",
       }}
     >
-
-<div id="top"></div>
-
+      <div id="top"></div>
 
       <header className="text-center text-3xl font-bold mb-10 flex justify-between items-center p-6 relative z-30">
         <div>🌌 Planetside</div>
@@ -27,7 +25,7 @@ function App() {
         </nav>
       </header>
 
-            {/* Planeter: flex rad, tett med gap, overflow-visible slik popup får plass */}
+      {/* Planeter: flex rad, tett med gap, overflow-visible slik popup får plass */}
       <div className="flex flex-nowrap justify-center gap-2 mb-56 px-6 relative z-30 overflow-visible">
         {planets.map((planet) => (
           <PlanetCard
@@ -39,11 +37,12 @@ function App() {
         ))}
       </div>
 
-      {/* Svart fade over stjernene – ozonlag */}
+      {/* Svart fade over stjernene */}
       <div
         className="w-full h-32 relative z-20 -mt-32"
         style={{
-          background: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%)",
+          background:
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%)",
         }}
       />
 
@@ -57,23 +56,22 @@ function App() {
         </div>
       </div>
 
-
       {/* Footer */}
       <footer className="bg-gradient-to-t from-[#001f3f] via-[#0077cc] to-white text-white text-center py-10 relative z-40">
-  <div className="space-y-4">
-    <p className="text-sm text-black">
-      © {new Date().getFullYear()}{" "}
-      <span className="text-white font-semibold">Planetside</span> 🌍 Alle rettigheter reservert.
-    </p>
-    <a
-      href="#top"
-      className="inline-block text-sm text-blue-200 hover:text-white hover:underline transition"
-    >
-      ⬆ Til toppen
-    </a>
-  </div>
-</footer>
-
+        <div className="space-y-4">
+          <p className="text-sm text-black">
+            © {new Date().getFullYear()}{" "}
+            <span className="text-white font-semibold">Planetside</span> 🌍 Alle
+            rettigheter reservert.
+          </p>
+          <a
+            href="#top"
+            className="inline-block text-sm text-blue-200 hover:text-white hover:underline transition"
+          >
+            ⬆ Til toppen
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
