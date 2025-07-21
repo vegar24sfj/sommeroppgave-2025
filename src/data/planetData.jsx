@@ -4,7 +4,7 @@ export const planets = [
   {
     id: "merkur",
     name: "Merkur",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/30/Mercury_in_color_-_Prockter07_centered.jpg",
+    image: "/images/merkur.png",
     description: (
       <div className="space-y-4">
         <p>Merkur er den nærmeste planeten til solen og den minste i solsystemet.</p>
@@ -15,7 +15,7 @@ export const planets = [
   {
     id: "venus",
     name: "Venus",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg",
+    image: "/images/venus.png",
     description: (
       <div className="space-y-4">
         <p>Venus er lik Jorden i størrelse, men har en tykk atmosfære av CO₂ og ekstrem varme.</p>
@@ -26,7 +26,7 @@ export const planets = [
   {
     id: "jorden",
     name: "Jorden",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg",
+    image: "/images/jorden.png",
     description: (
       <div className="space-y-4">
         <p>Jorden er den tredje planeten fra solen og den eneste vi vet har liv.</p>
@@ -37,7 +37,7 @@ export const planets = [
   {
     id: "mars",
     name: "Mars",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg",
+    image: "/images/mars.png",
     description: (
       <div className="space-y-4">
         <p>Mars kalles ofte den røde planeten på grunn av sitt jernoksid-rike støv.</p>
@@ -48,7 +48,7 @@ export const planets = [
   {
     id: "jupiter",
     name: "Jupiter",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg",
+    image: "/images/jupiter.png",
     description: (
       <div className="space-y-4">
         <p>Jupiter er den største planeten i solsystemet og er en gassgigant.</p>
@@ -59,7 +59,7 @@ export const planets = [
   {
     id: "saturn",
     name: "Saturn",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg",
+    image: "/images/saturn.png",
     description: (
       <div className="space-y-4">
         <p>Saturn er berømt for sitt imponerende ringsystem laget av is og steinpartikler.</p>
@@ -70,7 +70,7 @@ export const planets = [
   {
     id: "uranus",
     name: "Uranus",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg",
+    image: "/images/uranus.png",
     description: (
       <div className="space-y-4">
         <p>Uranus er en isgigant med en blek blågrønn farge på grunn av metan i atmosfæren.</p>
@@ -81,7 +81,7 @@ export const planets = [
   {
     id: "neptun",
     name: "Neptun",
-    image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg",
+    image: "/images/neptun.png",
     description: (
       <div className="space-y-4">
         <p>Neptun er den ytterste planeten i solsystemet og også en isgigant.</p>
