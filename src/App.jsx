@@ -23,7 +23,7 @@ function App() {
         </nav>
       </header>
 
-      {/* Planeter: flex rad, tett med gap, overflow-visible slik popup får plass */}
+            {/* Planeter: flex rad, tett med gap, overflow-visible slik popup får plass */}
       <div className="flex flex-nowrap justify-center gap-2 mb-56 px-6 relative z-30 overflow-visible">
         {planets.map((planet) => (
           <PlanetCard
@@ -35,6 +35,14 @@ function App() {
         ))}
       </div>
 
+      {/* Svart fade over stjernene – ozonlag */}
+      <div
+        className="w-full h-32 relative z-20 -mt-32"
+        style={{
+          background: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%)",
+        }}
+      />
+
       {/* Kontaktseksjon */}
       <div
         id="contact"
@@ -44,6 +52,7 @@ function App() {
           <ContactForm />
         </div>
       </div>
+
 
       {/* Footer */}
       <footer className="bg-gradient-to-t from-[#001f3f] via-[#0077cc] to-white text-white text-center py-4 relative z-40">
