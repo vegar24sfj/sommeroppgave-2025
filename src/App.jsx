@@ -36,23 +36,28 @@ function App() {
       </div>
 
       {/* Kontaktseksjon */}
-      <div
-        id="contact"
-        className="bg-gradient-to-b from-black via-blue-900 to-white text-black py-28 px-6 relative z-30"
-      >
-        <div className="max-w-3xl mx-auto">
-          <ContactForm />
-        </div>
-      </div>
+<div
+  id="contact"
+  className="bg-gradient-to-b from-black via-blue-900 to-white text-black py-28 px-6 relative z-30 min-h-[400px]"
+>
+  <div className="max-w-3xl mx-auto">
+    <ContactForm />
+  </div>
+</div>
+
+
 
       {/* Footer */}
-      <footer className="bg-gradient-to-t from-[#001f3f] via-[#0077cc] to-white text-white text-center py-6 relative z-30">
-        <p className="text-sm text-black">
-          © {new Date().getFullYear()}{" "}
-          <span className="text-white font-semibold">Planetside</span> 🌍 Alle
-          rettigheter reservert.
-        </p>
-      </footer>
+<footer
+  className="bg-gradient-to-t from-[#001f3f] via-[#0077cc] to-white text-white text-center py-4 relative z-40"
+>
+  <p className="text-sm text-black">
+    © {new Date().getFullYear()}{" "}
+    <span className="text-white font-semibold">Planetside</span> 🌍 Alle
+    rettigheter reservert.
+  </p>
+</footer>
+
     </div>
   );
 }
