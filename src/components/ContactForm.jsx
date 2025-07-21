@@ -27,7 +27,12 @@ export default function ContactForm() {
     setStatus("");
 
     // Enkel validering
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
       setStatus("Vennligst fyll ut alle felt.");
       return;
     }
@@ -46,7 +51,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="max-w-xl mx-auto p-6 bg-gray-900 rounded-lg text-white">
+    <section
+      id="contact"
+      className="max-w-xl mx-auto p-6 bg-gray-900 rounded-lg text-white"
+    >
       <h2 className="text-2xl mb-6 text-center font-bold">Kontakt meg</h2>
 
       {status && (

@@ -14,15 +14,15 @@ const PlanetCard = ({ name, image, description }) => {
         src={image}
         alt={name}
         className={`rounded-full w-44 h-44 object-cover mx-auto transition-transform duration-300 ease-in-out ${
-          hover ? "scale-110 shadow-[0_0_30px_0_rgba(0,255,255,0.6)]" : "shadow-lg"
+          hover
+            ? "scale-110 shadow-[0_0_30px_0_rgba(0,255,255,0.6)]"
+            : "shadow-lg"
         }`}
       />
       <h3 className="mt-2 font-semibold">{name}</h3>
 
       {hover && (
-        <div
-          className="absolute top-full left-1/2 mt-2 -translate-x-1/2 z-50 w-[300px]"
-        >
+        <div className="absolute top-full left-1/2 mt-2 -translate-x-1/2 z-50 w-[300px]">
           <Popup description={description} />
         </div>
       )}
