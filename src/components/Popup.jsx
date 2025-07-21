@@ -1,8 +1,6 @@
-import React from "react";
-
 const Popup = ({ description }) => {
   return (
-    <div className="bg-white bg-opacity-90 backdrop-blur-md text-black p-3 shadow-lg text-left text-sm whitespace-normal break-words rounded-md">
+    <div className="bg-white bg-opacity-90 text-black p-4 shadow-lg max-w-xs rounded-md whitespace-normal break-words">
       {description}
     </div>
   );
