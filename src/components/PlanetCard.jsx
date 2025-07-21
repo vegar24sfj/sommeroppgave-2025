@@ -15,7 +15,7 @@ const PlanetCard = ({ name, image, description }) => {
         alt={name}
         className={`w-44 h-44 object-contain mx-auto transition-transform duration-300 ease-in-out ${
           hover
-            ? "scale-110 drop-shadow-[0_0_30px_rgba(0,255,255,0.6)]"
+            ? "scale-150 drop-shadow-[0_0_30px_rgba(0,255,255,0.6)]"
             : "drop-shadow"
         }`}
       />
