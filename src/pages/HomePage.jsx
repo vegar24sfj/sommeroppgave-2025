@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div className="relative z-30 px-6">
       {/* Planetkort i horisontal rad med god plass og synlig overflow for hover-effekt */}
-      <div className="flex flex-nowrap justify-center gap-6 overflow-visible mb-56">
+      <div className="flex flex-nowrap justify-center gap-6 overflow-visible">
         {planets.map((planet) => (
           <PlanetCard
             key={planet.id}
