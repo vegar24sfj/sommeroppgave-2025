@@ -28,6 +28,7 @@ const PlanetCard = ({ name, image, description }) => {
 </h3>
 
 
+
       {hover && (
         <div className="absolute top-full left-1/2 mt-3 -translate-x-1/2 z-50 w-[320px]">
           <Popup description={description} />

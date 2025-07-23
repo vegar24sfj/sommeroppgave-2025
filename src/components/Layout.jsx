@@ -12,20 +12,20 @@ export default function Layout() {
         backgroundRepeat: "repeat",
       }}
     >
-     <header className="text-center text-3xl font-bold mb-10 flex justify-around items-center px-20 py-6 relative z-30">
-  <Link to="/" className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
-    🌌 Planetside
-  </Link>
+      <header className="text-center text-3xl font-bold mb-10 flex justify-around items-center px-20 py-6 relative z-30">
+        <Link
+          to="/"
+          className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          🌌 Planetside
+        </Link>
 
-  <nav>
-    <Link to="/contact" className="text-blue-400 hover:underline">
-      Kontakt
-    </Link>
-  </nav>
-</header>
-
-
-
+        <nav>
+          <Link to="/contact" className="text-blue-400 hover:underline">
+            Kontakt
+          </Link>
+        </nav>
+      </header>
 
       {/* Gradient-bakgrunn rundt alt innhold */}
       <div className="bg-gradient-to-b from-black via-blue-900 to-white text-black py-20 px-6 relative z-30 flex-grow">
@@ -47,14 +47,14 @@ export default function Layout() {
         <div className="space-y-4">
           <p className="text-sm text-black">
             © {new Date().getFullYear()}{" "}
-            <span className="text-white font-semibold">Planetside</span> 🌍 Alle
-            rettigheter reservert.
+            <span className="text-white font-semibold">Planetside</span> Laget
+            av Vegar.
           </p>
           <Link
             to="/"
             className="inline-block text-sm text-blue-200 hover:text-white hover:underline transition"
           >
-            ⬆ Til toppen
+            Til hovedsiden
           </Link>
         </div>
       </footer>
