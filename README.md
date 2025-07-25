@@ -26,4 +26,4 @@ Jeg startet med nivå 1 (Fundamentals), men prosjektet utviklet seg naturlig mot
 
 ---
 
-Laget av Vegar Ravndal – Sommer 2025
+Laget av Vegar – Sommer 2025
