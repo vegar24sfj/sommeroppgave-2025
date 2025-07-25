@@ -8,6 +8,7 @@ export default function HomePage() {
   const [selectedPlanet, setSelectedPlanet] = useState(null);
 
   const handlePlanetClick = (planet) => {
+    console.log("Clicked planet:", planet.name);
     setSelectedPlanet(planet);
   };
 
@@ -17,7 +18,6 @@ export default function HomePage() {
 
   return (
     <div className="relative z-30 w-full h-[600px] max-w-5xl mx-auto flex">
-      {/* Solsystemet og planetenes bane */}
       <div className="relative flex-grow h-full">
         {/* Sol i midten */}
         <div
@@ -25,39 +25,38 @@ export default function HomePage() {
         />
 
         {planets.map((planet, index) => {
-  const orbitRadius = baseOrbit + index * 50;
-  const duration = 10 + index * 3;
-  const delay = 10 + index * 5; // større negativ delay for mer "innfallet"
+          const orbitRadius = baseOrbit + index * 50;
+          const duration = 10 + index * 3;
+          const delay = 15 + index * 5;
 
-  return (
-    <div
-      key={planet.id}
-      className="absolute left-1/2 top-1/2"
-      style={{
-        width: orbitRadius * 2,
-        height: orbitRadius * 2,
-        marginLeft: -orbitRadius,
-        marginTop: -orbitRadius,
-        animation: `orbit ${duration}s linear infinite`,
-        animationDelay: `-${delay}s`,
-        borderRadius: "50%",
-      }}
-    >
-      <div
-        style={{ transform: `translateX(${orbitRadius}px)` }}
-        className="w-20 h-20 relative cursor-pointer animate-fadeScaleInQuickStart"
-        onClick={() => handlePlanetClick(planet)}
-      >
-        <PlanetCard
-          name={planet.name}
-          image={planet.image}
-          color={planet.color}
-        />
-      </div>
-    </div>
-  );
-})}
-
+          return (
+            <div
+              key={planet.id}
+              className="absolute left-1/2 top-1/2"
+              style={{
+                width: orbitRadius * 2,
+                height: orbitRadius * 2,
+                marginLeft: -orbitRadius,
+                marginTop: -orbitRadius,
+                animation: `orbit ${duration}s linear infinite`,
+                animationDelay: `-${delay}s`,
+                borderRadius: "50%",
+              }}
+            >
+              <div
+                style={{ transform: `translateX(${orbitRadius}px)` }}
+                className="w-20 h-20 relative cursor-pointer animate-fadeScaleInQuickStart"
+              >
+                <PlanetCard
+                  name={planet.name}
+                  image={planet.image}
+                  color={planet.color}
+                  onClick={() => handlePlanetClick(planet)}
+                />
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       {/* Popup ved siden av animasjonen */}

@@ -6,9 +6,14 @@ export default function Layout() {
       className="relative flex flex-col min-h-screen text-white"
       style={{
         backgroundColor: "#000",
-        backgroundImage:
-          "url('https://www.transparenttextures.com/patterns/stardust.png')",
-        backgroundRepeat: "repeat",
+        backgroundImage: `
+          linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.1)),
+          url('https://www.transparenttextures.com/patterns/stars.png'),
+          url('https://www.transparenttextures.com/patterns/stardust.png')
+        `,
+        backgroundRepeat: "repeat, repeat, repeat",
+        backgroundSize: "auto, auto, auto",
+        backgroundBlendMode: "overlay, normal, normal",
       }}
     >
       {/* Header */}
@@ -27,18 +32,9 @@ export default function Layout() {
         </nav>
       </header>
 
-      {/* Svart fade – legges over stjernehimmel men under innhold */}
-      <div
-        className="absolute inset-x-0 bottom-0 h-48 z-20 pointer-events-none"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%)",
-        }}
-      />
-
-      {/* Innhold med padding nederst for popup-plass */}
-      <div className="relative z-30 bg-gradient-to-b from-black via-blue-900 to-white text-black flex-grow">
-        <main className="max-w-7xl mx-auto relative z-30 pb-40">
+      {/* Innhold med økt padding topp og bunn for mer "luft" */}
+      <div className="relative z-30 bg-gradient-to-b from-black via-blue-900/80 to-white text-black flex-grow">
+        <main className="max-w-7xl mx-auto relative z-30 pt-28 pb-52">
           <Outlet />
         </main>
       </div>
