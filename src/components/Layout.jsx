@@ -12,7 +12,7 @@ export default function Layout() {
       }}
     >
       {/* Header */}
-      <header className="text-center text-3xl font-bold flex justify-around items-center px-20 py-6 relative z-30">
+      <header className="text-center text-3xl font-bold flex justify-around items-center px-20 py-6 relative z-30 mb-7">
         <Link
           to="/"
           className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
