@@ -1,40 +1,26 @@
-import React, { useState } from "react";
-import Popup from "./Popup";
+// Fjern denne linjen hvis useState ikke brukes her
+// import { useState } from "react";
 
-const PlanetCard = ({ name, image, description }) => {
-  const [hover, setHover] = useState(false);
-
+const PlanetCard = ({ name, image, color, onClick }) => {
   return (
     <div
-  className="relative w-64 aspect-square text-center cursor-pointer"
-  onMouseEnter={() => setHover(true)}
-  onMouseLeave={() => setHover(false)}
->
-  <img
-    src={image}
-    alt={name}
-    className={`w-full h-full object-contain mx-auto transition-transform duration-300 ease-in-out ${
-      hover
-        ? "scale-110 drop-shadow-[0_0_40px_rgba(0,255,255,0.8)]"
-        : "drop-shadow-lg"
-    }`}
-  />
-
-
-      <h3
-  style={{ fontFamily: "'Orbitron', sans-serif" }}
-  className="mt-3 font-semibold text-white drop-shadow-[0_0_10px_cyan] transition-colors duration-500 animate-pulse"
->
-  {name}
-</h3>
-
-
-
-      {hover && (
-        <div className="absolute top-full left-1/2 mt-3 -translate-x-1/2 z-50 w-[320px]">
-          <Popup description={description} />
-        </div>
-      )}
+      className="relative flex flex-col items-center justify-center w-full h-full cursor-pointer transition-transform duration-300 ease-in-out"
+      onClick={onClick}
+    >
+      <div className="relative w-16 h-16">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-contain rounded-full animate-fadeScaleInFast"
+          style={{ filter: `drop-shadow(0 0 6px ${color})` }}
+        />
+        <span
+          className="absolute inset-0 flex items-center justify-center text-[10px] font-bold bg-black bg-opacity-40 rounded-full pointer-events-none"
+          style={{ color }}
+        >
+          {name}
+        </span>
+      </div>
     </div>
   );
 };
