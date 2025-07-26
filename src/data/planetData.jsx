@@ -1,4 +1,3 @@
-// src/data/planetData.js
 import React from "react";
 
 export const planets = [
