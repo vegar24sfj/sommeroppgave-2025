@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { planets } from "../data/planetData";
 import Popup from "../components/Popup";
 
 export default function HomePage() {
   const baseOrbit = 80;
-  const orbitSpacing = 35; // Mindre mellomrom mellom planeter
+  const orbitSpacing = 45; // Økt avstand mellom planetene
   const [selectedPlanet, setSelectedPlanet] = useState(null);
 
   const handlePlanetClick = (planet) => {
@@ -26,13 +26,13 @@ export default function HomePage() {
 
         {planets.map((planet, index) => {
           const orbitRadius = baseOrbit + index * orbitSpacing;
-          const duration = 10 + index * 3;
+          const duration = 20 + index * 3; // Senk hastigheten på rotasjon
           const delay = (duration / planets.length) * index;
 
           return (
             <div
               key={planet.id}
-              className="absolute left-1/2 top-1/2 pointer-events-none"
+              className="absolute left-1/2 top-1/2 pointer-events-auto"
               style={{
                 width: orbitRadius * 2,
                 height: orbitRadius * 2,
@@ -41,16 +41,17 @@ export default function HomePage() {
                 animation: `orbit ${duration}s linear infinite`,
                 animationDelay: `-${delay}s`,
                 borderRadius: "50%",
+                zIndex: 100 - index, // Dynamisk z-index for å sørge for at de nærmere har høyere z-index
               }}
             >
               <div
-                className="relative pointer-events-auto z-40 animate-fadeScaleInQuickStart"
+                className="relative z-50 animate-fadeScaleInQuickStart"
                 style={{ transform: `translateX(${orbitRadius}px)` }}
               >
                 <div
                   onClick={() => handlePlanetClick(planet)}
                   title={planet.name}
-                  className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-xs md:text-sm font-bold cursor-pointer hover:scale-110 transition-transform shadow-md"
+                  className="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-xs md:text-sm font-bold cursor-pointer hover:scale-110 transition-transform shadow-md"
                   style={{
                     backgroundColor: planet.color,
                     boxShadow: `0 0 8px ${planet.color}`,

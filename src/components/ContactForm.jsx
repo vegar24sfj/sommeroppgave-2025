@@ -53,7 +53,7 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="max-w-xl mx-auto p-6 bg-gray-900 rounded-lg text-white"
+      className="max-w-xl mx-auto p-6 bg-gray-900 rounded-lg text-white animate-fadeInUp" // Legger til animasjonen her
     >
       <h2 className="text-2xl mb-6 text-center font-bold">Kontakt meg</h2>
 
