@@ -4,6 +4,7 @@ import Popup from "../components/Popup";
 
 export default function HomePage() {
   const baseOrbit = 80;
+  const orbitSpacing = 35; // Mindre mellomrom mellom planeter
   const [selectedPlanet, setSelectedPlanet] = useState(null);
 
   const handlePlanetClick = (planet) => {
@@ -24,7 +25,7 @@ export default function HomePage() {
         />
 
         {planets.map((planet, index) => {
-          const orbitRadius = baseOrbit + index * 50;
+          const orbitRadius = baseOrbit + index * orbitSpacing;
           const duration = 10 + index * 3;
           const delay = (duration / planets.length) * index;
 
@@ -49,7 +50,7 @@ export default function HomePage() {
                 <div
                   onClick={() => handlePlanetClick(planet)}
                   title={planet.name}
-                  className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-[10px] md:text-xs font-bold cursor-pointer hover:scale-110 transition-transform shadow-md"
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-xs md:text-sm font-bold cursor-pointer hover:scale-110 transition-transform shadow-md"
                   style={{
                     backgroundColor: planet.color,
                     boxShadow: `0 0 8px ${planet.color}`,
