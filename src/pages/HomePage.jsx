@@ -25,38 +25,40 @@ export default function HomePage() {
         />
 
         {planets.map((planet, index) => {
-          const orbitRadius = baseOrbit + index * 50;
-          const duration = 10 + index * 3;
-          const delay = 15 + index * 5;
+  const orbitRadius = baseOrbit + index * 50;
+  const duration = 10 + index * 3;
+  // Forskjøvet startposisjon jevnt fordelt:
+  const delay = (duration / planets.length) * index;
 
-          return (
-            <div
-              key={planet.id}
-              className="absolute left-1/2 top-1/2"
-              style={{
-                width: orbitRadius * 2,
-                height: orbitRadius * 2,
-                marginLeft: -orbitRadius,
-                marginTop: -orbitRadius,
-                animation: `orbit ${duration}s linear infinite`,
-                animationDelay: `-${delay}s`,
-                borderRadius: "50%",
-              }}
-            >
-              <div
-                style={{ transform: `translateX(${orbitRadius}px)` }}
-                className="w-20 h-20 relative cursor-pointer animate-fadeScaleInQuickStart"
-              >
-                <PlanetCard
-                  name={planet.name}
-                  image={planet.image}
-                  color={planet.color}
-                  onClick={() => handlePlanetClick(planet)}
-                />
-              </div>
-            </div>
-          );
-        })}
+  return (
+    <div
+      key={planet.id}
+      className="absolute left-1/2 top-1/2"
+      style={{
+        width: orbitRadius * 2,
+        height: orbitRadius * 2,
+        marginLeft: -orbitRadius,
+        marginTop: -orbitRadius,
+        animation: `orbit ${duration}s linear infinite`,
+        animationDelay: `-${delay}s`,
+        borderRadius: "50%",
+      }}
+    >
+      <div
+        style={{ transform: `translateX(${orbitRadius}px)` }}
+        className="w-20 h-20 relative cursor-pointer animate-fadeScaleInQuickStart"
+      >
+        <PlanetCard
+          name={planet.name}
+          image={planet.image}
+          color={planet.color}
+          onClick={() => handlePlanetClick(planet)}
+        />
+      </div>
+    </div>
+  );
+})}
+
       </div>
 
       {/* Popup ved siden av animasjonen */}
