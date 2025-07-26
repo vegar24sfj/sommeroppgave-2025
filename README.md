@@ -22,7 +22,7 @@ Dette prosjektet er laget i React med Vite som utviklingsmiljø. Styling er gjor
 
 ## Egenevaluering
 
-Jeg startet med nivå 1 (Fundamentals), men prosjektet utviklet seg naturlig mot Advanced-nivå etter hvert. Designskissen i Figma var først løs, men tok en ny retning underveis. Jeg valgte en mørk, rominspirert fargepalett og brukte React med komponenter, props og routing. Tailwind CSS gjorde det lett å jobbe raskt med stil og responsivitet. Jeg eksperimenterte med små visuelle effekter som hover, glow og enkle overganger for å gjøre opplevelsen mer dynamisk. Arbeidet med struktur, design og semantikk var lærerikt, og jeg er fornøyd med fremgangen min både teknisk og visuelt.
+Jeg startet med nivå 1 (Fundamentals), men prosjektet utviklet seg naturlig mot Advanced-nivå. Designskissen i Figma var løs i starten, men tok en ny retning med et solsystem-tema der planetene er klikkbare for å vise mer informasjon. Jeg benyttet en mørk, rominspirert fargepalett og jobbet med React for komponenter, props og routing. Tailwind CSS gjorde det lett å jobbe raskt med stil og responsivitet. Det har vært lærerikt å jobbe med CSS og animasjoner, spesielt med @keyframes for hover-effekter og enkle overganger. Jeg har fått god innsikt i hvordan animasjoner kan gjøre brukeropplevelsen mer dynamisk uten å distrahere fra innholdet.
 
 ---
 
