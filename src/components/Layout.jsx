@@ -14,7 +14,10 @@ export default function Layout() {
     >
       {/* Header */}
       <header className="text-center text-3xl font-bold flex justify-around items-center px-20 py-6 relative z-30">
-        <Link to="/" className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <Link
+          to="/"
+          className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
           🌌 Planetside
         </Link>
         <nav>
@@ -45,9 +48,13 @@ export default function Layout() {
         <div className="space-y-4">
           <p className="text-sm text-black">
             © {new Date().getFullYear()}{" "}
-            <span className="text-white font-semibold">Planetside</span> laget av Vegar.
+            <span className="text-white font-semibold">Planetside</span> laget
+            av Vegar.
           </p>
-          <Link to="/" className="inline-block text-sm text-blue-200 hover:text-white hover:underline transition">
+          <Link
+            to="/"
+            className="inline-block text-sm text-blue-200 hover:text-white hover:underline transition"
+          >
             Til hovedsiden
           </Link>
         </div>

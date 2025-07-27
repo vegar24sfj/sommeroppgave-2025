@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 @import "tailwindcss";
 
 /* Fade + slide-up animasjon (popup, tekst) */
@@ -28,7 +28,8 @@
 
 /* Pulserende glød på solen */
 @keyframes pulse-sun {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 60px rgba(255, 255, 0, 0.7);
   }
   50% {
@@ -80,13 +81,19 @@
 
 .animate-fadeScaleInQuickStart {
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1); /* mykere og raskere start */
+  animation-timing-function: cubic-bezier(
+    0.7,
+    0,
+    0.3,
+    1
+  ); /* mykere og raskere start */
   animation-duration: 0.25s; /* kortere tid for raskere start */
   animation-name: fadeScaleInQuickStart;
 }
 
 @keyframes pulseOzone {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
   }
   50% {

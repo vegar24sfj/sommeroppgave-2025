@@ -20,9 +20,7 @@ export default function HomePage() {
     <div className="relative z-30 w-full h-[600px] max-w-5xl mx-auto flex">
       <div className="relative flex-grow h-full pointer-events-auto z-30">
         {/* Sol i midten */}
-        <div
-          className="absolute left-1/2 top-1/2 w-16 h-16 bg-yellow-400 rounded-full shadow-lg z-40 transform -translate-x-1/2 -translate-y-1/2 animate-pulse-sun"
-        />
+        <div className="absolute left-1/2 top-1/2 w-16 h-16 bg-yellow-400 rounded-full shadow-lg z-40 transform -translate-x-1/2 -translate-y-1/2 animate-pulse-sun" />
 
         {planets.map((planet, index) => {
           const orbitRadius = baseOrbit + index * orbitSpacing;
