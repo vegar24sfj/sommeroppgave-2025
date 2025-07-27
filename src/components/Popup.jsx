@@ -1,4 +1,3 @@
-// src/components/Popup.jsx
 import React from "react";
 
 const Popup = ({ name, image, description, onClose }) => {
@@ -11,7 +10,10 @@ const Popup = ({ name, image, description, onClose }) => {
       >
         ×
       </button>
-      <h2 className="text-lg font-semibold mb-2" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+      <h2
+        className="text-lg font-semibold mb-2"
+        style={{ fontFamily: "'Orbitron', sans-serif" }}
+      >
         {name}
       </h2>
       <img
@@ -19,7 +21,7 @@ const Popup = ({ name, image, description, onClose }) => {
         alt={name}
         className="w-full h-auto rounded-md mb-3 object-contain"
       />
-      <div className="text-xs">{description}</div>
+      <div className="text-sm leading-relaxed">{description}</div>
     </div>
   );
 };

@@ -44,8 +44,8 @@ export default function Layout() {
         <div className="space-y-4">
           <p className="text-sm text-black">
             © {new Date().getFullYear()}{" "}
-            <span className="text-white font-semibold">Planetside</span> Laget av
-            Vegar.
+            <span className="text-white font-semibold">Planetside</span> Laget
+            av Vegar.
           </p>
           <Link
             to="/"
