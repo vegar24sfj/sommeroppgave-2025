@@ -6,25 +6,17 @@ export default function Layout() {
       className="relative flex flex-col min-h-screen text-white"
       style={{
         backgroundColor: "#000",
-        backgroundImage: `
-          linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.1)),
-          url('https://www.transparenttextures.com/patterns/stars.png'),
-          url('https://www.transparenttextures.com/patterns/stardust.png')
-        `,
-        backgroundRepeat: "repeat, repeat, repeat",
-        backgroundSize: "auto, auto, auto",
-        backgroundBlendMode: "overlay, normal, normal",
+        backgroundImage: `url('https://www.transparenttextures.com/patterns/stardust.png')`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "auto",
+        backgroundBlendMode: "normal",
       }}
     >
       {/* Header */}
-      <header className="text-center text-3xl font-bold flex justify-around items-center px-20 py-6 relative z-30 mb-7">
-        <Link
-          to="/"
-          className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
+      <header className="text-center text-3xl font-bold flex justify-around items-center px-20 py-6 relative z-30">
+        <Link to="/" className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
           🌌 Planetside
         </Link>
-
         <nav>
           <Link to="/contact" className="text-blue-400 hover:underline">
             Kontakt
@@ -32,25 +24,30 @@ export default function Layout() {
         </nav>
       </header>
 
-      {/* Innhold med økt padding topp og bunn for mer "luft" */}
-      <div className="relative z-30 bg-gradient-to-b from-black via-blue-900/80 to-white text-black flex-grow">
-        <main className="max-w-7xl mx-auto relative z-30 pt-28 pb-52">
+      {/* Hovedinnhold med planeter */}
+      <main className="flex-grow relative z-50 bg-transparent overflow-visible">
+        <div className="relative max-w-7xl mx-auto px-4 pt-16 pb-24">
           <Outlet />
-        </main>
+        </div>
+      </main>
+
+      {/* Fade og ozonlag – under planetene men over bakgrunn */}
+      <div className="relative z-40">
+        {/* Svak svart fade */}
+        <div className="w-full h-6 bg-gradient-to-t from-black/30 to-transparent z-40 -mb-6 pointer-events-none" />
+
+        {/* Ozonlag med animasjon */}
+        <div className="w-full h-24 bg-gradient-to-t from-white via-[#0077cc]/70 to-transparent pointer-events-none animate-pulse-ozone" />
       </div>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-t from-[#001f3f] via-[#0077cc] to-white text-white text-center py-10 relative z-40">
+      <footer className="bg-gradient-to-t from-[#001f3f] via-[#0077cc] to-white text-white text-center py-10 relative z-10">
         <div className="space-y-4">
           <p className="text-sm text-black">
             © {new Date().getFullYear()}{" "}
-            <span className="text-white font-semibold">Planetside</span> Laget
-            av Vegar.
+            <span className="text-white font-semibold">Planetside</span> laget av Vegar.
           </p>
-          <Link
-            to="/"
-            className="inline-block text-sm text-blue-200 hover:text-white hover:underline transition"
-          >
+          <Link to="/" className="inline-block text-sm text-blue-200 hover:text-white hover:underline transition">
             Til hovedsiden
           </Link>
         </div>

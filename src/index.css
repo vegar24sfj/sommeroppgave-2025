@@ -85,3 +85,15 @@
   animation-name: fadeScaleInQuickStart;
 }
 
+@keyframes pulseOzone {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.animate-pulse-ozone {
+  animation: pulseOzone 5s ease-in-out infinite;
+}
